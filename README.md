@@ -17,6 +17,7 @@ Some of the codes might show error is due to the affect of Flutter version, we a
 8. Effective dart: https://dart.dev/guides/language/effective-dart
 9. A tour to the Dart language: https://dart.dev/guides/language/language-tour
 10. Crash course in Dart language (Highly Recommended to watch): https://www.youtube.com/watch?v=x0uinJvhNxI&t=5325s 
+11. When everything is done, this is the link on how to upload it into github: https://www.youtube.com/watch?v=DsUwTmSyfYE&t=221s
 
 # Developer
 1. CHEN HAO MUN (2019)
