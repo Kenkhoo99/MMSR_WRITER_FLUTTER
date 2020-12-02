@@ -52,7 +52,7 @@ final _followersController = TextEditingController();
  
   try {
       final contributorResponse = await http.post(
-          "http://10.0.2.2/mmsr/checkExistContributor.php",
+          "http://i2hub.tarc.edu.my:8887/mmsr/checkExistContributor.php",
           body: {
             "ContributorID": username.toString(),
           });

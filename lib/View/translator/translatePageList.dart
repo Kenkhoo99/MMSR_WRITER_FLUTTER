@@ -1078,7 +1078,7 @@ class _TranslatePageListState extends State<TranslatePageList> {
     // if (tempStorybookTitle == widget.titlePassText &&
     //     duplicateStoryCheck == false) {
     //saving the storybook to server
-    http.post("http://10.0.2.2/mmsr/updateStorybook.php", body: {
+    http.post("http://i2hub.tarc.edu.my:8887/mmsr/updateStorybook.php", body: {
       //Insert storybook
       'storybookID': widget.passStorybookID,
       'storybookTitle': widget.titlePassText,
@@ -1178,7 +1178,7 @@ class _TranslatePageListState extends State<TranslatePageList> {
       _insertPageNo.add((i + 1).toString());
 
       //insert the translated page into server
-      http.post("http://10.0.2.2/mmsr/insertTranslatePage.php",
+      http.post("http://i2hub.tarc.edu.my:8887/mmsr/insertTranslatePage.php",
           body: {
             //Insert page
             "pageID": _insertPageID[i],
@@ -1210,7 +1210,7 @@ class _TranslatePageListState extends State<TranslatePageList> {
     // if (tempStorybookTitle == widget.titlePassText &&
     //     duplicateStoryCheck == false) {
     //saving the storybook to server
-    http.post("http://10.0.2.2/mmsr/updateStorybook.php", body: {
+    http.post("http://i2hub.tarc.edu.my:8887/mmsr/updateStorybook.php", body: {
       //Insert storybook
       'storybookID': widget.passStorybookID,
       'storybookTitle': widget.titlePassText,
@@ -1310,7 +1310,7 @@ class _TranslatePageListState extends State<TranslatePageList> {
       _insertPageNo.add((i + 1).toString());
 
       //insert translated page into server
-      http.post("http://10.0.2.2/mmsr/insertTranslatePage.php",
+      http.post("http://i2hub.tarc.edu.my:8887/mmsr/insertTranslatePage.php",
           body: {
             //Insert page
             "pageID": _insertPageID[i],
@@ -1387,7 +1387,7 @@ class _TranslatePageListState extends State<TranslatePageList> {
 
     //delete page in server
     await http
-        .post("http://10.0.2.2/mmsr/deleteByPageID.php", body: {
+        .post("http://i2hub.tarc.edu.my:8887/mmsr/deleteByPageID.php", body: {
       "pageID": id,
       "languageCode": code,
     });

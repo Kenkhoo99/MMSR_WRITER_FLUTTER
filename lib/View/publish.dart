@@ -124,7 +124,7 @@ class _UploadStoryState extends State<UploadStory> {
 
     try {
       final statusResponse = await http
-          .post("http://10.0.2.2/mmsr/updateStatus.php", body: {
+          .post("http://i2hub.tarc.edu.my:8887/mmsr/updateStatus.php", body: {
         "ContributorID": username.toString(),
       });
       updateStatus = json.decode(statusResponse.body);
@@ -668,7 +668,7 @@ class _UploadStoryState extends State<UploadStory> {
   Future inProgress(String storybookID, String languageCode) async { //Update status to in progress
     try {
       await http.post(
-          "http://10.0.2.2/mmsr/changeStoryStatus.php",
+          "http://i2hub.tarc.edu.my:8887/mmsr/changeStoryStatus.php",
           body: {
             "status": "In Progress",
             "storybookID": storybookID,
@@ -684,7 +684,7 @@ class _UploadStoryState extends State<UploadStory> {
   Future submitted(String storybookID, String languageCode) async {//Update status to submitted
     try {
       await http.post(
-          "http://10.0.2.2/mmsr/changeStoryStatus.php",
+          "http://i2hub.tarc.edu.my:8887/mmsr/changeStoryStatus.php",
           body: {
             "status": "Submitted",
             "storybookID": storybookID,
@@ -781,7 +781,7 @@ class _UploadStoryState extends State<UploadStory> {
 
   Future _deleteStorybook(String id, String code, String title, String cover,
       String desc, String genre, String contributorID) async {//Delete operation
-    http.post("http://10.0.2.2/mmsr/insertDeletebook.php", body: { //Insert deleted book into a new table
+    http.post("http://i2hub.tarc.edu.my:8887/mmsr/insertDeletebook.php", body: { //Insert deleted book into a new table
       "storybookTitle": title,
       "storybookCover": cover,
       "storybookDesc": desc,
@@ -791,12 +791,12 @@ class _UploadStoryState extends State<UploadStory> {
     });
 
     await http
-        .post("http://10.0.2.2/mmsr/deleteStorybook.php", body: { //Delete the storybook
+        .post("http://i2hub.tarc.edu.my:8887/mmsr/deleteStorybook.php", body: { //Delete the storybook
       "storybookID": id,
       "languageCode": code,
     });
 
-    await http.post("http://10.0.2.2/mmsr/deletePage.php", body: { //Delete its related page
+    await http.post("http://i2hub.tarc.edu.my:8887/mmsr/deletePage.php", body: { //Delete its related page
       "storybookID": id,
       "languageCode": code,
     });

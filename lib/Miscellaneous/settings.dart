@@ -14,11 +14,11 @@ class _SettingsState extends State<Settings> {
   final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
   final String feedBackFormUrl =
       "https://forms.gle/nfhkSWUCWw76Ghea6"; //feedback form URL
-  final String aboutUsUrl = "http://10.0.2.2/mmsr/aboutus.php";
+  final String aboutUsUrl = "http://i2hub.tarc.edu.my:8887/mmsr/aboutus.php";
   final String contactUsUrl =
-      "http://10.0.2.2/mmsr/ContactUs/contactus.html"; //contact us page URL
+      "http://i2hub.tarc.edu.my:8887/mmsr/contactus.html"; //contact us page URL
   final String privacyUrl =
-      "http://10.0.2.2/mmsr/privacypolicy.php"; //privacy statement page URL
+      "http://i2hub.tarc.edu.my:8887/mmsr/privacypolicy.php"; //privacy statement page URL
   bool switchVal = false;
 
   @override

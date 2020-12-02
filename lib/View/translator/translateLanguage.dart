@@ -35,7 +35,7 @@ class _TranslateLanguageLoadState extends State<TranslateLanguageLoad> {
   Future<List> getLanguage() async {//disable the original language from the translate language list (prevent user from confusing)
     try {
       final response = await http.post(
-          "http://10.0.2.2/mmsr/translatorLanguage.php",
+          "http://i2hub.tarc.edu.my:8887/mmsr/translatorLanguage.php",
           body: {
             'languageCode': widget.languageCode,
           });
@@ -128,7 +128,7 @@ class _TranslateLanguageState extends State<TranslateLanguage> {
   Future _limit() async {//check whether this story translated or not, only a story without translation can be translate
     try {
       final lanResponse = await http.post(
-          "http://10.0.2.2/mmsr/translateLimitLanguage.php",
+          "http://i2hub.tarc.edu.my:8887/mmsr/translateLimitLanguage.php",
           body: {
             'storybookID': widget.storybookID,
           });
@@ -343,7 +343,7 @@ class _TranslateLanguageState extends State<TranslateLanguage> {
       try {
         //retrieve from server
         final response = await http
-            .post("http://10.0.2.2/mmsr/getPage.php", body: {
+            .post("http://i2hub.tarc.edu.my:8887/mmsr/getPage.php", body: {
           'storybookID': widget.storybookID,
           'languageCode': widget.languageCode,
         });

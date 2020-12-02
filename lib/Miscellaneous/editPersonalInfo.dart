@@ -129,7 +129,7 @@ class _EditPersonalInfoState extends State<EditPersonalInfo> {
 
     try {
       final contributorResponse = await http.post(
-          "http://10.0.2.2/mmsr/checkExistContributor.php",
+          "http://i2hub.tarc.edu.my:8887/mmsr/checkExistContributor.php",
           body: {
             "ContributorID": username.toString(),
           });
@@ -156,7 +156,7 @@ class _EditPersonalInfoState extends State<EditPersonalInfo> {
     try {
       //final updateResponse =
       await http.post(
-          "http://10.0.2.2/mmsr/updateContributor.php",
+          "http://i2hub.tarc.edu.my:8887/mmsr/updateContributor.php",
           body: {
             'ContributorID': signupUsernameController.text,
             'Name': signupNameController.text,

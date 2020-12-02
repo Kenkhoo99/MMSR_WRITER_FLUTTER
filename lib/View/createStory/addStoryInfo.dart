@@ -57,7 +57,7 @@ class _AddStoryInfoState extends State<AddStoryInfo> {
     var languageData;
     try {
       final response = await http
-          .post("http://10.0.2.2/mmsr/passLanguage.php", body: {
+          .post("http://i2hub.tarc.edu.my:8887/mmsr/passLanguage.php", body: {
         'languageDesc': text,
       });
       languageData = json.decode(response.body);

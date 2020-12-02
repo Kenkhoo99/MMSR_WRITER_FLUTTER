@@ -854,7 +854,7 @@ class _LoginPageState extends State<LoginPage>
   Future<List> _login() async { //login function
     try {
       final response = await http
-          .post("http://10.0.2.2/mmsr/login.php", 
+          .post("http://i2hub.tarc.edu.my:8887/mmsr/login.php", 
       body: {
         "username": usernameController.text,
         "password": passwordController.text
@@ -907,7 +907,7 @@ class _LoginPageState extends State<LoginPage>
 
   Future _signUp() async { //register
     var url =
-        "http://10.0.2.2/mmsr/contributorRegister.php"; //register new user
+        "http://i2hub.tarc.edu.my:8887/mmsr/contributorRegister.php"; //register new user
     BirthDate = _dateTime.year.toString() +
         '-' +
         _dateTime.month.toString() +
@@ -922,7 +922,7 @@ class _LoginPageState extends State<LoginPage>
     }
 
     final response = await http.post(
-        "http://10.0.2.2/mmsr/checkExistContributor.php", //check valid username
+        "http://i2hub.tarc.edu.my:8887/mmsr/checkExistContributor.php", //check valid username
         body: {
           "ContributorID": signupUsernameController.text,
         });

@@ -25,7 +25,7 @@ class LoadBookWriter extends StatefulWidget {
 
 //load the book before entering the page
 class _LoadBookWriterState extends State<LoadBookWriter> {
-  String url = 'http://10.0.2.2/mmsr/';
+  String url = 'http://i2hub.tarc.edu.my:8887/mmsr/';
 
   var storyData;
   var contributorData;
@@ -119,7 +119,7 @@ class WriterPublish extends StatefulWidget {
 class _WriterPublishState extends State<WriterPublish> {
   final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
 
-  String url = 'http://10.0.2.2/mmsr/';
+  String url = 'http://i2hub.tarc.edu.my:8887/mmsr/';
   String language;
 
   List<String> nameList = List<String>();

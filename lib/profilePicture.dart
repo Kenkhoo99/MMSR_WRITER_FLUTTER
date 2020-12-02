@@ -67,7 +67,7 @@ class _ProfilePictureState extends State<ProfilePicture> {
                     passImage = null;
                   }
 
-                  http.post("http://10.0.2.2/mmsr/updatePicture.php", body: {
+                  http.post("http://i2hub.tarc.edu.my:8887/mmsr/updatePicture.php", body: {
                     //Insert storybook
                     'ContributorID': widget.contributorID,
                     'picture': base64Encode(passImage.readAsBytesSync()),

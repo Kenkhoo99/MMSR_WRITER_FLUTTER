@@ -128,7 +128,7 @@ class _StoryListState extends State<StoryList> {
     var storybookIDCheck;
     try {
       final storybookResponse = await http.post(
-          "http://10.0.2.2/mmsr/checkStorybookID.php"); //Read last storybook ID
+          "http://i2hub.tarc.edu.my:8887/mmsr/checkStorybookID.php"); //Read last storybook ID
       storybookIDCheck = json.decode(storybookResponse.body); //1 data only
     } on SocketException {
       print("Poor connection");
@@ -997,7 +997,7 @@ class _StoryListState extends State<StoryList> {
 
     // if (tempStorybookTitle == widget.titlePassText &&
     //     duplicateStoryCheck == false) {
-    http.post("http://10.0.2.2/mmsr/updateStorybook.php", body: {
+    http.post("http://i2hub.tarc.edu.my:8887/mmsr/updateStorybook.php", body: {
       //Insert storybook
       'storybookID': storybookID,
       'storybookTitle': widget.titlePassText,
@@ -1095,7 +1095,7 @@ class _StoryListState extends State<StoryList> {
       //pageNo
       _insertPageNo.add((i + 1).toString());
 
-      http.post("http://10.0.2.2/mmsr/updatePage.php", body: {
+      http.post("http://i2hub.tarc.edu.my:8887/mmsr/updatePage.php", body: {
         //Insert page
         "pageID": _insertPageID[i],
         "pagePhoto": _insertImage[i],
@@ -1115,7 +1115,7 @@ class _StoryListState extends State<StoryList> {
     //Of course also delete what user want to delete
     //Here is some sort like a logic solution to solve the issue
     final pageResponse = await http
-        .post("http://10.0.2.2/mmsr/pageByPageNo.php", body: {
+        .post("http://i2hub.tarc.edu.my:8887/mmsr/pageByPageNo.php", body: {
       'storybookID': storybookID,
       'languageCode': widget.languageValue,
     });
@@ -1123,7 +1123,7 @@ class _StoryListState extends State<StoryList> {
     if (allPages.length > 0) {
       if (allPages.length != _pageContent.length) {
         await http.post(
-            "http://10.0.2.2/mmsr/deletePageByPageNo.php",
+            "http://i2hub.tarc.edu.my:8887/mmsr/deletePageByPageNo.php",
             body: {
               'storybookID': storybookID,
               'languageCode': widget.languageValue,
@@ -1159,7 +1159,7 @@ class _StoryListState extends State<StoryList> {
 
     // if (tempStorybookTitle == widget.titlePassText &&
     //     duplicateStoryCheck == false) {
-    http.post("http://10.0.2.2/mmsr/updateStorybook.php", body: {
+    http.post("http://i2hub.tarc.edu.my:8887/mmsr/updateStorybook.php", body: {
       //Insert storybook
       'storybookID': storybookID,
       'storybookTitle': widget.titlePassText,
@@ -1257,7 +1257,7 @@ class _StoryListState extends State<StoryList> {
       //pageNo
       _insertPageNo.add((i + 1).toString());
 
-      http.post("http://10.0.2.2/mmsr/updatePage.php", body: {
+      http.post("http://i2hub.tarc.edu.my:8887/mmsr/updatePage.php", body: {
         //Insert page
 
         "pageID": _insertPageID[i],
@@ -1278,7 +1278,7 @@ class _StoryListState extends State<StoryList> {
     //Of course also delete what user want to delete
     //Here is some sort like a logic solution to solve the issue
     final pageResponse = await http
-        .post("http://10.0.2.2/mmsr/pageByPageNo.php", body: {
+        .post("http://i2hub.tarc.edu.my:8887/mmsr/pageByPageNo.php", body: {
       'storybookID': storybookID,
       'languageCode': widget.languageValue,
     });
@@ -1287,7 +1287,7 @@ class _StoryListState extends State<StoryList> {
       if (allPages.length != _pageContent.length) {
         //delete the page in server
         await http.post(
-            "http://10.0.2.2/mmsr/deletePageByPageNo.php",
+            "http://i2hub.tarc.edu.my:8887/mmsr/deletePageByPageNo.php",
             body: {
               'storybookID': storybookID,
               'languageCode': widget.languageValue,
@@ -1361,7 +1361,7 @@ class _StoryListState extends State<StoryList> {
       String id, String code, int index, String storybookID) async {
     //delete the page based on its page ID and language Code
     await http
-        .post("http://10.0.2.2/mmsr/deleteByPageID.php", body: {
+        .post("http://i2hub.tarc.edu.my:8887/mmsr/deleteByPageID.php", body: {
       "pageID": id,
       "languageCode": code,
     });

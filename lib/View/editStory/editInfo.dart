@@ -65,7 +65,7 @@ class _EditInfoState extends State<EditInfo> {
     //pass languageDesc to check languageCode
     var languageData;
     final response = await http
-        .post("http://10.0.2.2/mmsr/passLanguage.php", body: {
+        .post("http://i2hub.tarc.edu.my:8887/mmsr/passLanguage.php", body: {
       'languageDesc': text,
     });
     languageData = json.decode(response.body);
@@ -580,7 +580,7 @@ class _CoverImageState extends State<CoverImage> {
       //run one time only
       try {
         final response = await http
-            .post("http://10.0.2.2/mmsr/getPage.php", body: {
+            .post("http://i2hub.tarc.edu.my:8887/mmsr/getPage.php", body: {
           'storybookID': widget.id,
           'languageCode': widget.languageValue,
         });

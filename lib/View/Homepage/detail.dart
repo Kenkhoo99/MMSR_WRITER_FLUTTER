@@ -32,7 +32,7 @@ class LoadDetail extends StatefulWidget {
 
 class _LoadDetailState extends State<LoadDetail> {
   var db = DBHelper();
-  String url = 'http://10.0.2.2/mmsr/';
+  String url = 'http://i2hub.tarc.edu.my:8887/mmsr/';
 
   @override
   void initState() {
@@ -140,7 +140,7 @@ class Detail extends StatefulWidget {
 }
 
 class _DetailState extends State<Detail> {
-  String url = 'http://10.0.2.2/mmsr/';
+  String url = 'http://i2hub.tarc.edu.my:8887/mmsr/';
   bool exist = false;
   String storyLanguage = '', storyID = '', storyTitle = '';
   final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();

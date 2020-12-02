@@ -57,7 +57,7 @@ class _NavigatorState extends State<NavigatorWriter>
       try {
         if (username != null) {
           final updateResponse = await http.post(
-              "http://10.0.2.2/mmsr/uploadStoryPage.php",
+              "http://i2hub.tarc.edu.my:8887/mmsr/uploadStoryPage.php",
               body: {
                 "ContributorID": username,
               });
@@ -102,7 +102,7 @@ class _NavigatorState extends State<NavigatorWriter>
     } else { //not first time use the app in the device
       try {
         final statusResponse = await http
-            .post("http://10.0.2.2/mmsr/updateStatus.php", body: {
+            .post("http://i2hub.tarc.edu.my:8887/mmsr/updateStatus.php", body: {
           "ContributorID": username,
         });
         updateStatus = json.decode(statusResponse.body);
@@ -143,7 +143,7 @@ class _NavigatorState extends State<NavigatorWriter>
 
     if (check == true || check == null) {
       final response =
-          await http.post("http://10.0.2.2/mmsr/getLanguage.php"); //retrieve language data from server
+          await http.post("http://i2hub.tarc.edu.my:8887/mmsr/getLanguage.php"); //retrieve language data from server
       languageData = json.decode(response.body);
 
       if (languageData.length > 0) {

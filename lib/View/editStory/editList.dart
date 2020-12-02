@@ -193,7 +193,7 @@ class _EditListState extends State<EditList> {
   Future limitFunction() async {//story with translated version cannot add new page
     try {
       final editResponse = await http
-          .post("http://10.0.2.2/mmsr/limitEdit.php", body: {
+          .post("http://i2hub.tarc.edu.my:8887/mmsr/limitEdit.php", body: {
         "storybookID": widget.passStorybookID,
       });
 
@@ -1181,7 +1181,7 @@ class _EditListState extends State<EditList> {
     String username = prefs.get('loginID');//get username
     //String base64PassImage = base64Encode(widget.passImage.readAsBytesSync());
     //save in server
-    http.post("http://10.0.2.2/mmsr/updateStorybook.php", body: {
+    http.post("http://i2hub.tarc.edu.my:8887/mmsr/updateStorybook.php", body: {
       //Insert storybook
       'storybookID': widget.passStorybookID,
       'storybookTitle': widget.titlePassText,
@@ -1220,7 +1220,7 @@ class _EditListState extends State<EditList> {
       //pageNo
       _insertPageNo.add((i + 1).toString());
 
-      http.post("http://10.0.2.2/mmsr/updatePage.php", body: {
+      http.post("http://i2hub.tarc.edu.my:8887/mmsr/updatePage.php", body: {
         //Insert page
 
         "pageID": _insertPageID[i],
@@ -1241,7 +1241,7 @@ class _EditListState extends State<EditList> {
     //start from the page that user require to delete
     //
     final pageResponse = await http
-        .post("http://10.0.2.2/mmsr/pageByPageNo.php", body: {
+        .post("http://i2hub.tarc.edu.my:8887/mmsr/pageByPageNo.php", body: {
       'storybookID': widget.passStorybookID,
       'languageCode': widget.languageValue,
     });
@@ -1249,7 +1249,7 @@ class _EditListState extends State<EditList> {
     if (allPages.length > 0) {
       if (allPages.length != _pageContent.length) {
         await http.post(
-            "http://10.0.2.2/mmsr/deletePageByPageNo.php",
+            "http://i2hub.tarc.edu.my:8887/mmsr/deletePageByPageNo.php",
             body: {
               'storybookID': widget.passStorybookID,
               'languageCode': widget.languageValue,
@@ -1267,7 +1267,7 @@ class _EditListState extends State<EditList> {
     String username = prefs.get('loginID');//get username
     //String base64PassImage = base64Encode(widget.passImage.readAsBytesSync());
     //publish to server
-    http.post("http://10.0.2.2/mmsr/updateStorybook.php", body: {
+    http.post("http://i2hub.tarc.edu.my:8887/mmsr/updateStorybook.php", body: {
       //Insert storybook
       'storybookID': widget.passStorybookID,
       'storybookTitle': widget.titlePassText,
@@ -1302,7 +1302,7 @@ class _EditListState extends State<EditList> {
       //pageNo
       _insertPageNo.add((i + 1).toString());
 
-      http.post("http://10.0.2.2/mmsr/updatePage.php", body: {
+      http.post("http://i2hub.tarc.edu.my:8887/mmsr/updatePage.php", body: {
         //Insert page
 
         "pageID": _insertPageID[i],
@@ -1323,7 +1323,7 @@ class _EditListState extends State<EditList> {
     //start from the page that user require to delete
     //
     final pageResponse = await http
-        .post("http://10.0.2.2/mmsr/pageByPageNo.php", body: {
+        .post("http://i2hub.tarc.edu.my:8887/mmsr/pageByPageNo.php", body: {
       'storybookID': widget.passStorybookID,
       'languageCode': widget.languageValue,
     });
@@ -1331,7 +1331,7 @@ class _EditListState extends State<EditList> {
     if (allPages.length > 0) {
       if (allPages.length != _pageContent.length) {
         await http.post(
-            "http://10.0.2.2/mmsr/deletePageByPageNo.php",
+            "http://i2hub.tarc.edu.my:8887/mmsr/deletePageByPageNo.php",
             body: {
               'storybookID': widget.passStorybookID,
               'languageCode': widget.languageValue,
@@ -1404,7 +1404,7 @@ class _EditListState extends State<EditList> {
 
     //delete in server
     await http
-        .post("http://10.0.2.2/mmsr/deleteByPageID.php", body: {
+        .post("http://i2hub.tarc.edu.my:8887/mmsr/deleteByPageID.php", body: {
       "pageID": id,
       "languageCode": code,
     });
