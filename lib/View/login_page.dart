@@ -938,6 +938,7 @@ class _LoginPageState extends State<LoginPage>
           "Gender": gender,
           "email": signupEmailController.text,
           "DOB": BirthDate,
+         
         });
         signupUsernameController.text = "";
         signupPasswordController.text = "";
@@ -946,7 +947,7 @@ class _LoginPageState extends State<LoginPage>
         signupConfirmPasswordController.text = "";
         DOB_text = 'Birthdate';
         _onSignInButtonPress();
-        BlueSnackBar("Successfull Registered");
+        BlueSnackBar("Successfully Registered");
       } else {
         showInSnackBar("Wrong Confirm Password");
       }

@@ -75,7 +75,7 @@ class _ProfilePictureState extends State<ProfilePicture> {
 
                   Navigator.of(context).pushAndRemoveUntil(
                       MaterialPageRoute(
-                          builder: (context) => NavigatorWriter()),
+                          builder: (context) => NavigatorWriter(page: "two")),
                       (Route<dynamic> route) => false);
                 }
               }),
