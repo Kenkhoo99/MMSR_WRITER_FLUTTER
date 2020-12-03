@@ -14,6 +14,7 @@ import 'package:image_cropper/image_cropper.dart';
 import 'package:flutter_image_compress/flutter_image_compress.dart';
 import 'package:flutter/services.dart';
 import 'dart:math';
+import 'package:path_provider/path_provider.dart' as path_provider;
 
 import 'package:mmsr/utils/navigator.dart';
 
@@ -140,7 +141,7 @@ class _ProfilePictureState extends State<ProfilePicture> {
 
         result = await FlutterImageCompress.compressAndGetFile(
           croppedFile.path,
-          croppedFile.path,
+          croppedFile.path + "temp.jpeg",
           quality: 88, //image quality, the higher the larger size of the image
         );
       } on NoSuchMethodError {
@@ -183,9 +184,10 @@ class _ProfilePictureState extends State<ProfilePicture> {
           maxWidth: 512,
         );
 
+      
         result = await FlutterImageCompress.compressAndGetFile(
           croppedFile.path,
-          croppedFile.path,
+          croppedFile.path + "temp.jpeg",
           //image quality
           quality: 88,
         );

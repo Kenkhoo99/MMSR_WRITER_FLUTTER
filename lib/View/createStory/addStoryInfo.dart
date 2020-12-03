@@ -468,9 +468,10 @@ class _CoverImageState extends State<CoverImage> {
           maxWidth: 512,
         );
 
+
         result = await FlutterImageCompress.compressAndGetFile(
           croppedFile.path,
-          croppedFile.path,
+          croppedFile.path + "temp.jpeg",
           quality: 88,//image quality, the higher the larger size of the image
         );
       } on NoSuchMethodError { //when user click on cancel selecting image
@@ -513,7 +514,7 @@ class _CoverImageState extends State<CoverImage> {
 
         result = await FlutterImageCompress.compressAndGetFile(
           croppedFile.path,
-          croppedFile.path,
+          croppedFile.path + "temp.jpeg",
           //image quality
           quality: 88,
         );

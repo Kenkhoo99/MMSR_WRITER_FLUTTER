@@ -481,7 +481,7 @@ class _CoverImageState extends State<CoverImage> {
 
       result = await FlutterImageCompress.compressAndGetFile(
         croppedFile.path,
-        croppedFile.path,
+        croppedFile.path + "temp.jpeg",
         //quality of the cropped image, the higher the larger size
         quality: 88,
       );
@@ -522,7 +522,7 @@ class _CoverImageState extends State<CoverImage> {
 
       result = await FlutterImageCompress.compressAndGetFile(
         croppedFile.path,
-        croppedFile.path,
+        croppedFile.path + "temp.jpeg",
         //quality of the cropped image
         quality: 88,
       );
