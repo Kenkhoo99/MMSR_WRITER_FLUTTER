@@ -835,7 +835,7 @@ class _EditListState extends State<EditList> {
 
       result = await FlutterImageCompress.compressAndGetFile(
         croppedFile.path,
-        croppedFile.path,
+        croppedFile.path + "temp.jpeg",
         //quality of the cropped image, better quality larger size of image
         quality: 88,
       );
@@ -883,7 +883,7 @@ class _EditListState extends State<EditList> {
 
       result = await FlutterImageCompress.compressAndGetFile(
         croppedFile.path,
-        croppedFile.path,
+        croppedFile.path + "temp.jpeg",
         //quality of cropped image
         quality: 88,
       );
