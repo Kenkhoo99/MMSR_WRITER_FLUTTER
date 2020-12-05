@@ -153,7 +153,10 @@ class _StoryListState extends State<StoryList> {
   }
 
   Widget _buildPageList() {
-    return new ListView.builder(
+    return new Column(
+      children: <Widget>[
+     ListView.builder(
+      shrinkWrap: true,
       itemExtent: 100.0,
       itemCount: _pageContent.length,
       itemBuilder: (context, index) {
@@ -218,6 +221,15 @@ class _StoryListState extends State<StoryList> {
           ),
         );
       },
+    ),
+     SizedBox(
+      height:10,
+    ),
+    Container(
+      child: Text ('To Delete, swipe to the left',
+      style: TextStyle(color: Colors.red, fontSize:16),),
+    ),
+    ],
     );
   }
 

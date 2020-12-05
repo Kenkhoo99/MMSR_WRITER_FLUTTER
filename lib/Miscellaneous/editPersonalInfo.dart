@@ -1,5 +1,6 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
+import 'package:flutter/material.dart' as prefix0;
 import 'package:flutter/widgets.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:mmsr/style/theme.dart' as Theme;
@@ -390,12 +391,13 @@ class _EditPersonalInfoState extends State<EditPersonalInfo> {
                                       activeColor: Colors.blue,
                                       value: 1,
                                       groupValue: groupValue,
-                                    ),
+                                            ),
                                     new Text(
                                       'Male',
                                       style: TextStyle(
                                           fontFamily: "WorkSansSemiBold",
                                           fontSize: 16.0,
+                                          height:1,
                                           color: Colors.black),
                                     ),
                                     new Radio(
@@ -409,6 +411,7 @@ class _EditPersonalInfoState extends State<EditPersonalInfo> {
                                       style: TextStyle(
                                           fontFamily: "WorkSansSemiBold",
                                           fontSize: 16.0,
+                                          height:1,
                                           color: Colors.black),
                                     )
                                   ],

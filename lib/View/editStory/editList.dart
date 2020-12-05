@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/material.dart' as prefix0;
 import 'package:flutter/services.dart';
 import 'package:image_picker/image_picker.dart';
 import 'dart:io';
@@ -230,7 +231,10 @@ class _EditListState extends State<EditList> {
   }
 
   Widget _buildPageList() {
-    return new ListView.builder(
+    return new Column ( 
+      children: <Widget> [
+      ListView.builder(
+      shrinkWrap: true,
       itemCount: widget.data == null ? 0 : _pageContent.length,
       itemBuilder: (context, index) {
         if (index < widget.data.length) {
@@ -327,8 +331,19 @@ class _EditListState extends State<EditList> {
           ),
         );
       },
+    ),
+    SizedBox(
+      height:10,
+    ),
+    Container(
+      child: Text ('To Delete, swipe to the left',
+      style: TextStyle(color: Colors.red, fontSize:16),),
+    ),
+      ],
     );
   }
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -371,6 +386,7 @@ class _EditListState extends State<EditList> {
               }),
         ],
       ),
+
       body: new Container(
         decoration: new BoxDecoration(
           gradient: new LinearGradient(
@@ -383,8 +399,10 @@ class _EditListState extends State<EditList> {
               stops: [0.0, 1.0],
               tileMode: TileMode.clamp),
         ),
-        child: _buildPageList(),
+        child: _buildPageList(), 
       ),
+
+     
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add),
         onPressed: () {
