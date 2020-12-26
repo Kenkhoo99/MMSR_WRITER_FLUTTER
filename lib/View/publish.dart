@@ -238,11 +238,11 @@ class _UploadStoryState extends State<UploadStory> {
           child: new Column(
             children: <Widget>[
               new Image.asset(
-                "assets/img/empty_book.png", //display image to show no storybook
+                "assets/img/empty.png", //display image to show no storybook
                 fit: BoxFit.fill,
                 filterQuality: FilterQuality.high,
-                height: MediaQuery.of(context).size.height / 2.1,
-                width: MediaQuery.of(context).size.width,
+                height: MediaQuery.of(context).size.height / 2,
+                width: MediaQuery.of(context).size.width / 1.2,
               ),
               Text(
                 'No storybook yet',

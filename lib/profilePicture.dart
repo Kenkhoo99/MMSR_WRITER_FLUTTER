@@ -56,7 +56,7 @@ class _ProfilePictureState extends State<ProfilePicture> {
               onPressed: () {
                 //next page
                 if (galleryFile == null && cameraFile == null) {
-                  //ensure storybook cover cannot be empty
+                  //ensurep profile picture cannot be empty
                   _showBookCoverDialog();
                 } else {
                   //store the image into passImage variable

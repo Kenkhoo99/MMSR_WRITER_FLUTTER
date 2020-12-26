@@ -57,6 +57,10 @@ flutter:
     - assets/img/empty_book.png
     - assets/img/empty_page.png
     - assets/img/recommend.png
+    - assets/img/empty.png
+    - assets/img/story_created.png
+    - assets/img/followers.png
+    - assets/img/story_published.png
     
   fonts:
     - family: WorkSansSemiBold

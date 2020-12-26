@@ -140,8 +140,8 @@ final _followersController = TextEditingController();
           height: MediaQuery.of(context).size.height,
           decoration: new BoxDecoration(
             borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(55.0),
-              topRight: Radius.circular(55.0),
+              // topLeft: Radius.circular(55.0),
+              // topRight: Radius.circular(55.0),
               // bottomLeft: Radius.circular(55.0),
               // bottomRight: Radius.circular(55.0),
             ),
@@ -240,61 +240,108 @@ final _followersController = TextEditingController();
                           ])),
                     ),
                   ),
+                      
+                  // new Padding(
+                  //   padding: EdgeInsets.all(32.0),
+                  //   child: new Row (
+                  //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  //     children: <Widget>[
+                  //       new Column(
+                  //         children: <Widget>[
+                  //             new Container(
+                  //               height:50,
+                  //               width:50,
+                  //               margin: const EdgeInsets.symmetric(
+                  //                 horizontal: 20.0,
+                  //               ),
+                  //               child: Image.asset(
+                  //                   "assets/img/story_created.png",
+                  //                   fit: BoxFit.fill,
+                  //         )
+                  //       ),
+                  //         ],
+                  //       ),
+                  //     ],
+                  //   ),
+                  // ),
+
+
+
                   new Padding(
                     padding: EdgeInsets.all(32.0),
                     child: new Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: <Widget>[
+                       
                         new Column(
                           children: <Widget>[
+                            new Container(
+                              height:50,
+                              width: 50,
+                              child: Image.asset("assets/img/story_created.png",
+                              fit: BoxFit.fill,),
+                            ),
+                             new SizedBox(
+                              height: 4.0,
+                            ),
                             new Text(
                               (totalStory.toString()),
-                              style: TextStyle(fontSize: 20.0),
+                              style: TextStyle(fontSize: 20.0, color: Colors.indigo),
                             ),
                             new SizedBox(
                               height: 4.0,
                             ),
                             new Text(
-                              "Story",
-                              textAlign: TextAlign.justify,
+                              "Story Created",
+                              textAlign: TextAlign.center,
                               style:
-                                  TextStyle(fontSize: 20.0, color: Colors.blue,decoration:TextDecoration.underline),
+                                  TextStyle(fontSize: 15.0, color: Colors.blue,decoration:TextDecoration.underline),
                             ),
-                            new Text(
-                              "created",
-                              textAlign: TextAlign.justify,
-                              style:
-                                  TextStyle(fontSize: 20.0, color: Colors.blue,decoration:TextDecoration.underline),
-                            ),
+                            // new Text(
+                            //   "created",
+                            //   textAlign: TextAlign.justify,
+                            //   style:
+                            //       TextStyle(fontSize: 20.0, color: Colors.blue,decoration:TextDecoration.underline),
+                            // ),
                           ],
                         ),
                         new Container(
                           width: 1,
-                          height: 70.0,
+                          height: 100.0,
                           color: Colors.grey,
                         ),
                          new Column(
                           children: <Widget>[
+                            new Container(
+                              height:50,
+                              width: 50,
+                              child: Image.asset("assets/img/followers.png",
+                              fit: BoxFit.fill,),
+                            ),
+                             new SizedBox(
+                              height: 4.0,
+                            ),
                             new Text(
                               (followers.toString()), //Followers .toString()
-                              style: TextStyle(fontSize: 20.0),
+                              style: TextStyle(fontSize: 20.0, color: Colors.indigo),
                             ),
                             new SizedBox(
-                              height: 10.0,
+                              height: 4.0,
                             ),
                             new Text(
                               "Followers",
-                              textAlign: TextAlign.justify,
+                              textAlign: TextAlign.center,
                               style:
-                                  TextStyle(fontSize: 20.0, color: Colors.blue,decoration:TextDecoration.underline),
+                                  TextStyle(fontSize: 16.0, color: Colors.blue,decoration:TextDecoration.underline),
                             ), 
                           ],
                         ),
                          new Container(
                           width: 1,
-                          height: 70.0,
+                          height: 100.0,
                           color: Colors.grey,
                         ), 
+                        
                         GestureDetector(
                           onTap: () {
                           Navigator.push(context,
@@ -304,25 +351,34 @@ final _followersController = TextEditingController();
                        }, 
                         child: Column(
                           children: <Widget>[
+                            new Container(
+                              height:50,
+                              width: 50,
+                              child: Image.asset("assets/img/story_published.png",
+                              fit: BoxFit.fill,),
+                            ),
+                             new SizedBox(
+                              height: 4.0,
+                            ),
                             new Text(
                               (storyPublished.toString()),
-                              style: TextStyle(fontSize: 20.0),
+                              style: TextStyle(fontSize: 20.0, color: Colors.indigo),
                             ),
                             new SizedBox(
                               height: 4.0,
                             ),
                             new Text(
-                              "Story",
-                              textAlign: TextAlign.justify,
+                              "Story Published",
+                              textAlign: TextAlign.center,
                               style:
-                                  TextStyle(fontSize: 20.0, color: Colors.blue,decoration:TextDecoration.underline),
+                                  TextStyle(fontSize: 16.0, color: Colors.blue,decoration:TextDecoration.underline),
                             ),
-                            new Text(
-                              "published",
-                              textAlign: TextAlign.justify,
-                              style:
-                                  TextStyle(fontSize: 20.0, color: Colors.blue,decoration:TextDecoration.underline),
-                            ),
+                            // new Text(
+                            //   "published",
+                            //   textAlign: TextAlign.justify,
+                            //   style:
+                            //       TextStyle(fontSize: 20.0, color: Colors.blue,decoration:TextDecoration.underline),
+                            // ),
                           ],
                         ),
                         ),

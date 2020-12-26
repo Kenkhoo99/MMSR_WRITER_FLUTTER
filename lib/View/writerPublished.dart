@@ -30,7 +30,7 @@ class _LoadBookWriterState extends State<LoadBookWriter> {
   var storyData;
   var contributorData;
 
-  Future<List> _getAllStorybook() async { //Get all storybook data
+  Future<List> _getAllStorybook() async { //Get all storybook data based on the writer itself
     try {
       final readResponse = await http.post(
         url + "allStorybook(Writer).php",
@@ -151,7 +151,7 @@ class _WriterPublishState extends State<WriterPublish> {
     return new Scaffold(
       appBar: AppBar(
         elevation: 0.5,
-        title: Text('Home'),
+        title: Text('Story Published'),
       ),
       key: _scaffoldKey,
       body: new RefreshIndicator(

@@ -1285,7 +1285,8 @@ class _EditListState extends State<EditList> {
     String username = prefs.get('loginID');//get username
     //String base64PassImage = base64Encode(widget.passImage.readAsBytesSync());
     //publish to server
-    http.post("http://i2hub.tarc.edu.my:8887/mmsr/updateStorybook.php", body: {
+    http.post("http://i2hub.tarc.edu.my:8887/mmsr/updateStorybook.php", 
+    body: {
       //Insert storybook
       'storybookID': widget.passStorybookID,
       'storybookTitle': widget.titlePassText,
